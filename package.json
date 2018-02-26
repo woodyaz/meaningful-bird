@@ -1,7 +1,7 @@
 {
   "name": "meaningful-bird",
   "version": "0.0.0",
-  "description": "A bot which reposts a tagged post to Workplace.",
+  "description": "A bot that makes sure edited posts are seen on Workplace.",
   "main": "lib/index.js",
   "author": "Woody Hansen",
   "license": "MIT",
