@@ -9,7 +9,8 @@
   "scripts": {
     "build": "babel src -d lib",
     "test": "jest",
-    "start": "yarn build && node lib/index.js"
+    "start": "yarn build && node lib/index.js",
+    "watch": "jest --watch"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
