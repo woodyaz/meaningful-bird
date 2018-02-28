@@ -1,2 +1,2 @@
 # Meaningful Bird
-[![Build Status](https://travis-ci.org/woodyaz/meaningful-bird.svg?branch=master)](https://travis-ci.org/woodyaz/meaningful-bird)
+[![CircleCI](https://circleci.com/gh/woodyaz/meaningful-bird/tree/master.svg?style=svg)](https://circleci.com/gh/woodyaz/meaningful-bird/tree/master)

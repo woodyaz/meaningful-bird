@@ -24,4 +24,9 @@ describe('Verify server response', () => {
     const response = await callServer('&hub.challenge=123')
     expect(response.text).toContain('123')
   })
+
+  it('Returns 200 ok on post', async () => {
+    const response = await request(app).post('/')
+    expect(response.statusCode).toBe(200)
+  })
 })
