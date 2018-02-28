@@ -10,7 +10,7 @@ export default class App extends Express {
     this.use((req, res, next) => {
       // Check that the verify_token matches
       if (req.method === 'GET') {
-        if (req.query['hub.verify_token'] === process.env.VERIFY_TOKEN) {
+        if (req.query['hub.verify_token'] && req.query['hub.verify_token'] === process.env.VERIFY_TOKEN) {
           next()
         } else {
           res.status(403).send('Forbidden')
