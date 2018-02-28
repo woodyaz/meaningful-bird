@@ -30,9 +30,7 @@ export default class App extends Express {
     })
 
     this.post('/', (req, res) => {
-      if (req.body.entry) {
-        res.status(200).send('ok')
-      }
+      res.status(200).send('ok')
     })
   }
 }
