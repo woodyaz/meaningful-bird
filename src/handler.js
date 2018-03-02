@@ -16,8 +16,9 @@ export default class Hander {
   router (change) {
     switch (change.field) {
       case 'comments': {
-        if (change.value.message === this.keyword) {
+        if (change.value.verb === 'add') {
           database.save(change.value.post_id, change.value)
+          console.log(`Following ${change.value.post_id}`)
           return true
         }
         break

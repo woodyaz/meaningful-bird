@@ -23,7 +23,7 @@ describe('Handler', () => {
   })
 
   describe('router()', () => {
-    it('calls database.save on comment', () => {
+    it('returns true with verb === add', () => {
       const handler = new Handler() // @TODO find out why unmock doesn't work here.
       handler.keyword = '+mb'
       const change = comment.entry[0].changes[0]
