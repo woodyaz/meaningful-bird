@@ -1,6 +1,7 @@
 import Express from 'express'
 import BodyParser from 'body-parser'
 import Morgan from 'morgan'
+import Hander from './handler'
 
 export default class App extends Express {
   constructor () {
@@ -30,6 +31,8 @@ export default class App extends Express {
     })
 
     this.post('/', (req, res) => {
+      const handler = new Hander()
+      handler.validateKeyword(req.body)
       res.status(200).send('ok')
     })
   }

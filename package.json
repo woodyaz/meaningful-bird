@@ -7,7 +7,7 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "build": "babel src -d build",
+    "build": "babel src -d lib",
     "test": "jest",
     "start": "yarn build && node lib/index.js",
     "watch": "jest --watch"
