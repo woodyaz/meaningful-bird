@@ -1,15 +1,15 @@
 {
   "name": "meaningful-bird",
   "version": "0.0.0",
-  "description": "A bot that makes sure edited posts are seen on Workplace.",
+  "description": "A custom integration that broadcasts a post on edit in Workplace.",
   "main": "lib/index.js",
   "author": "Woody Hansen",
   "license": "MIT",
   "private": false,
   "scripts": {
-    "build": "babel src -d build",
+    "build": "babel src -d lib",
     "test": "jest",
-    "start": "yarn build && node build/index.js",
+    "start": "yarn build && node lib/index.js",
     "watch": "jest --watch"
   },
   "devDependencies": {
@@ -22,6 +22,7 @@
   "dependencies": {
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
+    "memory-cache": "^0.2.0",
     "morgan": "^1.9.0",
     "yarn": "^1.3.2"
   },

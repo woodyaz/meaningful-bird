@@ -1,5 +1,5 @@
-import App from '../src/app'
-const request = require('supertest')
+import App from '../app'
+import request from 'supertest'
 const app = new App()
 
 async function callServer (path, verifyTokenEnv = 123) {
