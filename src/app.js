@@ -31,8 +31,10 @@ export default class App extends Express {
     })
 
     this.post('/', (req, res) => {
-      const handler = new Hander()
-      handler.validateKeyword(req.body)
+      if (req.body.entry) {
+        const handler = new Hander()
+        handler.validateKeyword(req.body)
+      }
       res.status(200).send('ok')
     })
   }
