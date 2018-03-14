@@ -16,20 +16,23 @@ export default class Hander {
       }
     }
   }
+
   mention (change) {
-    // check database
     const postId = change.value.post_id
     if (database.findById(postId)) {
-            
+      database.dropById(postId)
+      this.response('I\'m no longer watching this post.')
+    } else {
+      database.save(postId, change)
+      this.response('I\'ll watch this post for changes.')
     }
-    // if not there, save it
-    // call talk
-    // else
-    // save it
-    // call talk 
+  }
+
+  response (message) {
+    return message
   }
 
   edit () {
-
+    // @TODO handle edit type.
   }
 }
