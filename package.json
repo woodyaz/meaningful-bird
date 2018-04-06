@@ -30,5 +30,8 @@
     "env": [
       "jest"
     ]
+  },
+  "jest": {
+    "coverageFormats": ["json", "html"]
   }
 }
