@@ -9,4 +9,8 @@ export default class Database {
   findById (postId) {
     return cache.get(postId)
   }
+
+  dropById (postId) {
+    return cache.del(postId)
+  }
 }

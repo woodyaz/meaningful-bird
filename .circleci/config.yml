@@ -32,6 +32,18 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-        
+      
+      - run:
+          name: Setup code climate
+          command: |
+              curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+              chmod +x ./cc-test-reporter
+
       # run tests!
       - run: yarn test
+
+      - run:
+          name: Upload coverage results
+          command: |
+            ./cc-test-reporter format-coverage -t lcov $CIRCLE_ARTIFACTS/coverage/
+            ./cc-test-reporter upload-coverage

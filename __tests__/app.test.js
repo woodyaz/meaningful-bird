@@ -1,6 +1,11 @@
-import App from '../app'
+import App from '../src/app'
+import Routes from '../src/routes'
 import request from 'supertest'
+
 const app = new App()
+const routes = new Routes()
+app.get('/', routes.get)
+app.post('/', routes.post)
 
 async function callServer (path, verifyTokenEnv = 123) {
   const query = `/?hub.verify_token=123${path}`
