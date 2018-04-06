@@ -28,8 +28,8 @@ describe('Handler', () => {
       handler.mention(change)
       expect(handler.response).toHaveBeenCalledWith('I\'ll watch this post for changes.')
     })
-    it('stops follow the post if not found', () => {
-      database.findById = jest.fn().mockReturnValue(false)
+    it('stops following the post if not found', () => {
+      database.findById = jest.fn().mockReturnValue(false) // @TODO move this db stuff to it's own mock.
       database.dropById = jest.fn().mockReturnValue(true)
       handler.mention(change)
       expect(handler.response).toHaveBeenCalledWith('I\'m no longer watching this post.')
