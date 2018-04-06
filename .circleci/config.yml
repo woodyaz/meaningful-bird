@@ -40,10 +40,9 @@ jobs:
               chmod +x ./cc-test-reporter
 
       # run tests!
-      - run: yarn test
+      - run: yarn test --coverage --json
 
       - run:
           name: Upload coverage results
           command: |
-            ./cc-test-reporter format-coverage -t lcov $CIRCLE_ARTIFACTS/coverage/
-            ./cc-test-reporter upload-coverage
+            ./cc-test-reporter < coverage/lcov.info 
