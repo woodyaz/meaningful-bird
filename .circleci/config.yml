@@ -39,11 +39,9 @@ jobs:
               curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
               chmod +x ./cc-test-reporter
 
-      # run tests!
-      - run: yarn test
+      - run: ./cc-test-reporter before-build 
 
-      - run:
-          name: Upload coverage results
-          command: |
-            ./cc-test-reporter format-coverage -t lcov $CIRCLE_ARTIFACTS/coverage/
-            ./cc-test-reporter upload-coverage
+      # run tests!
+      - run: yarn test --coverage --json
+
+      - run: ./cc-test-reporter after-build 
