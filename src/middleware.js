@@ -6,7 +6,6 @@ export default class Middleware {
       } else {
         res.status(403).send('Forbidden')
       }
-    } else {
       next()
     }
   }

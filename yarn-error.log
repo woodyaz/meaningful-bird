@@ -1,5 +1,5 @@
 Arguments: 
-  /home/woody/.nvm/versions/node/v8.9.4/bin/node /usr/share/yarn/bin/yarn.js start
+  /home/woody/.nvm/versions/node/v8.9.4/bin/node /usr/share/yarn/bin/yarn.js test
 
 PATH: 
   /home/woody/bin:/home/woody/.nvm/versions/node/v8.9.4/bin:/home/woody/.rvm/gems/ruby-2.5.0/bin:/home/woody/.rvm/gems/ruby-2.5.0@global/bin:/home/woody/.rvm/rubies/ruby-2.5.0/bin:/home/woody/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin:/home/woody/.rvm/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin:/home/woody/.rvm/bin:/home/woody/.rvm/bin:/home/woody/.rvm/bin
@@ -24,7 +24,7 @@ npm manifest:
     "private": false,
     "scripts": {
       "build": "babel src -d lib",
-      "test": "jest",
+      "test": "jest --coverage",
       "start": "yarn build && node lib/index.js",
       "watch": "jest --watch"
     },
@@ -4249,7 +4249,7 @@ Trace:
   Error: Command failed.
   Exit code: 1
   Command: sh
-  Arguments: -c yarn build && node lib/index.js
+  Arguments: -c jest --coverage
   Directory: /home/woody/Documents/meaningful-bird
   Output:
   
