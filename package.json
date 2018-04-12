@@ -8,7 +8,7 @@
   "private": false,
   "scripts": {
     "build": "babel src -d lib",
-    "test": "jest --coverage",
+    "test": "jest",
     "start": "yarn build && node lib/index.js",
     "watch": "jest --watch"
   },

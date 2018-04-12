@@ -1,7 +1,6 @@
 import App from '../src/app'
 import Routes from '../src/routes'
 import request from 'supertest'
-import editFixture from '../__fixtures__/edit.json'
 
 const app = new App()
 const routes = new Routes()
