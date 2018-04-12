@@ -9,10 +9,6 @@ export default class Routes {
   }
 
   post (req, res) {
-    if (req.body.entry) {
-      // const handler = new Hander()
-      // handler.validateKeyword(req.body)
-    }
     res.status(200).send('ok')
   }
 }
